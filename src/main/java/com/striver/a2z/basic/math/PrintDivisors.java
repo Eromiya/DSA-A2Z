@@ -21,5 +21,7 @@ public class PrintDivisors {
         printDivisors(24);
         System.out.println();
         printDivisors(4);
+        System.out.println();
+        printDivisors(12);
     }
 }

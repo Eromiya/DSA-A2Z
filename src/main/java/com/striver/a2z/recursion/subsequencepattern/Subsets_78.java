@@ -13,9 +13,12 @@ public class Subsets_78 {
     public  void generateSubsets(List<List<Integer>>  out, int ind, List<Integer> in, int[] nums){
         out.add(new ArrayList<>(in));
         for(int i=ind; i<nums.length;i++) {
-            in.add(nums[ind]);
-            generateSubsets(out, ind+1, in, nums);
-            in.remove(in.size()-1);
+            if (i > ind && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            in.add(nums[i]);
+            generateSubsets(out, i + 1, in, nums);
+            in.remove(in.size() - 1);
         }
     }
 }

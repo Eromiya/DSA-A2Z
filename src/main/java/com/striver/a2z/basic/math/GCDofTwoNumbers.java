@@ -15,4 +15,15 @@ public class GCDofTwoNumbers {
         }
         return a;
     }
+
+    /**
+     * Optimsed one
+     * @param a
+     * @param b
+     * @return
+     */
+    public int gcd2(int a, int b) {
+        if (b == 0) return a;
+        return gcd2(b, a % b);
+    }
 }

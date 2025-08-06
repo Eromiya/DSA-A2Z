@@ -13,5 +13,15 @@ public class PrintNString {
 
     public static void main(String[] args) {
         print();
+        printABC(5);
     }
+
+    private static void printABC(int n) {
+        if(n==0){
+            return;
+        }
+        System.out.println("ABC");
+        printABC(n-1);
+    }
+
 }

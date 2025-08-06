@@ -15,8 +15,8 @@ public class CountDigits {
         if(String.valueOf(n).length()==1){
             return 1;
         }
-        while(n!=0){
-            int r = n%10;
+        while(n>0){
+//            int r = n%10;
             count++;
             n= n/10;
         }

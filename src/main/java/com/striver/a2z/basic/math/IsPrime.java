@@ -11,7 +11,7 @@ package com.striver.a2z.basic.math;
  */
 public class IsPrime {
     public boolean isPrime(int num){
-        if(num == 2 || num%2 == 0 || num%3==0){
+        if((num != 2 && num%2 == 0) || num%3==0){
             return false;
         }
         for(int i=5;i*i<=num;i+=2){

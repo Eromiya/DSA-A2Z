@@ -22,4 +22,8 @@ public class IsPrimeTest {
     public void test3(){
         assertFalse(isPrime.isPrime(534));
     }
+    @Test
+    public void test4(){
+        assertTrue(isPrime.isPrime(2));
+    }
 }

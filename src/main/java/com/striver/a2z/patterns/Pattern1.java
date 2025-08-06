@@ -19,6 +19,9 @@ public class Pattern1 {
     }
 
     public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("abc");
+        sb.append(sb);
+        System.out.println(sb.toString());
         printPattern(5);
     }
 }

@@ -14,6 +14,6 @@ public class ReverseNumberTest {
 
     @Test
     public void test2(){
-        assertEquals(989898, reverseNumber.reverseNumber(898989));
+        assertEquals(-989898, reverseNumber.reverseNumber(-898989));
     }
 }
