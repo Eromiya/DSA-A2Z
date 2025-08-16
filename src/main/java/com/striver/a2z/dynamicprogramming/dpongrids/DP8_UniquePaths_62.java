@@ -1,4 +1,4 @@
-package com.striver.a2z.dynamicprogramming.oneddp;
+package com.striver.a2z.dynamicprogramming.dpongrids;
 
 import java.util.Arrays;
 
