@@ -2,7 +2,7 @@ package com.striver.a2z.dynamicprogramming.dponsubsequences;
 
 import java.util.Arrays;
 
-public class DP14_SubsetSumEqualToTarget {
+public class DP15_PartitionEqualSubsetSum_416 {
 
     private static boolean isSubsetSum_Rec(int[] arr, int target, int ind) {
         if (target ==0){
@@ -38,8 +38,19 @@ public class DP14_SubsetSumEqualToTarget {
         return notTaken||taken;
     }
 
-    public static boolean isSubsetSum_Helper(int[] arr, int target) {
+    public static boolean isSubsetSum_Helper(int[] arr) {
         int n= arr.length;
+        // Find entire array Sum
+        int target =0;
+        for (int j : arr) {
+            target += j;
+        }
+        if(target%2 != 0){
+            return false;
+        }
+        else {
+            target/=2;
+        }
         int[][] dp = new int[n][target+1];
         for (int[] row : dp){
             Arrays.fill(row, -1);
@@ -47,8 +58,19 @@ public class DP14_SubsetSumEqualToTarget {
         return isSubsetSum_Mem(arr, target, arr.length-1, dp);
     }
 
-    public static boolean isSubsetSum_Tab(int[] arr, int target){
+    public static boolean isSubsetSum_Tab(int[] arr){
         int n= arr.length;
+        // Find entire array Sum
+        int target =0;
+        for(int i=0;i<n;i++){
+            target+=arr[i];
+        }
+        if(target%2 != 0){
+            return false;
+        }
+        else {
+            target/=2;
+        }
         boolean[][] dp = new boolean[n][target+1];
         for(int i=0;i<n;i++){
             dp[i][0] = true;
@@ -71,8 +93,6 @@ public class DP14_SubsetSumEqualToTarget {
 
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 4};
-        int k = 4;
-        int n = arr.length;
-        System.out.println(isSubsetSum_Tab(arr, k));
+        System.out.println(isSubsetSum_Tab(arr));
     }
 }
