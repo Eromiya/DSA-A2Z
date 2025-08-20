@@ -3,7 +3,7 @@ package com.striver.a2z.dynamicprogramming.dponlis;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class DP42_PrintingLongestIncreasingSubsequence {
+public class DP42_PrintLongestIncreasingSubsequence {
     // 1D Tabulation
     public static int longestIncreasingSubsequence(int nums[]) {
         int n = nums.length;
